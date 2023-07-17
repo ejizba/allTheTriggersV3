@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "helloworldqueue",
+      "connection": "storage_APPSETTING"
+    }
+  ],
+  "scriptFile": "../dist/storageQueueTrigger1/index.js"
+}

@@ -1,0 +1,13 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "helloWorldTopic",
+      "subscriptionName": "helloWorldSub",
+      "connection": "serviceBus_APPSETTING"
+    }
+  ],
+  "scriptFile": "../dist/serviceBusTopicTrigger1/index.js"
+}

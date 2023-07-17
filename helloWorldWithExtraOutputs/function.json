@@ -1,0 +1,64 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "blobOutput",
+      "path": "helloworldcontainer/hello-at-{DateTime}",
+      "connection": "storage_APPSETTING"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "cosmosDBOutput",
+      "databaseName": "helloWorldDB",
+      "collectionName": "helloWorldCol",
+      "connectionStringSetting": "cosmosDB_APPSETTING",
+      "partitionKey": "/id"
+    },
+    {
+      "type": "eventHub",
+      "direction": "out",
+      "name": "eventHubOutput",
+      "connection": "eventHub_APPSETTING",
+      "eventHubName": "helloWorldHub"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "queueOutput",
+      "queueName": "helloworldqueue",
+      "connection": "storage_APPSETTING"
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "connection": "serviceBus_APPSETTING",
+      "name": "serviceBusQueueOutput",
+      "queueName": "helloWorldQueue",
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "connection": "serviceBus_APPSETTING",
+      "name": "serviceBusTopicOutput",
+      "topicName": "helloWorldTopic"
+    }
+  ],
+  "scriptFile": "../dist/helloWorldWithExtraOutputs/index.js"
+}

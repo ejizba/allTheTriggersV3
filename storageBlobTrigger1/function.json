@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "helloworldcontainer/{name}",
+      "connection": "storage_APPSETTING"
+    }
+  ],
+  "scriptFile": "../dist/storageBlobTrigger1/index.js"
+}
