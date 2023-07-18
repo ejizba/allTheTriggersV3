@@ -50,7 +50,7 @@
       "direction": "out",
       "connection": "serviceBus_APPSETTING",
       "name": "serviceBusQueueOutput",
-      "queueName": "helloWorldQueue",
+      "queueName": "helloWorldQueue"
     },
     {
       "type": "serviceBus",
