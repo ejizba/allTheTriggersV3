@@ -4,12 +4,12 @@
       "type": "cosmosDBTrigger",
       "name": "documents",
       "direction": "in",
-      "leaseCollectionName": "leases",
-      "connectionStringSetting": "cosmosDB_APPSETTING",
+      "leaseContainerName": "leases",
+      "connection": "cosmosDB_APPSETTING",
       "databaseName": "helloWorldDB",
       "partitionKey": "/id",
-      "collectionName": "helloWorldCol",
-      "createLeaseCollectionIfNotExists": true
+      "containerName": "helloWorldCol",
+      "createLeaseContainerIfNotExists": true
     }
   ],
   "scriptFile": "../dist/cosmosTrigger1/index.js"

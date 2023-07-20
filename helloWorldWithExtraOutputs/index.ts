@@ -7,7 +7,7 @@ const httpTrigger: AzureFunction = async function (context: Context, request: Ht
 
     context.bindings.blobOutput = { name };
     context.bindings.queueOutput = { name };
-    context.bindings.cosmosDBOutput = [{ name }];
+    context.bindings.cosmosDBOutput = [{ name, id: name }];
     context.bindings.eventHubOutput = { name };
     context.bindings.serviceBusQueueOutput = { name };
     context.bindings.serviceBusTopicOutput = { name };

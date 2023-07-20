@@ -27,8 +27,8 @@
       "direction": "out",
       "name": "cosmosDBOutput",
       "databaseName": "helloWorldDB",
-      "collectionName": "helloWorldCol",
-      "connectionStringSetting": "cosmosDB_APPSETTING",
+      "containerName": "helloWorldCol",
+      "connection": "cosmosDB_APPSETTING",
       "partitionKey": "/id"
     },
     {
