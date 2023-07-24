@@ -6,6 +6,13 @@
       "direction": "in",
       "queueName": "helloworldqueue",
       "connection": "storage_APPSETTING"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outputQueueItem",
+      "queueName": "outputqueue",
+      "connection": "storage_APPSETTING"
     }
   ],
   "scriptFile": "../dist/storageQueueTrigger1/index.js"
