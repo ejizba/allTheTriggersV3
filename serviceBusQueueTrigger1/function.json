@@ -5,7 +5,14 @@
       "type": "serviceBusTrigger",
       "direction": "in",
       "queueName": "helloWorldQueue",
-      "connection": "serviceBus_APPSETTING"
+      "connection": "ServiceBusConnection"
+    },
+    {
+      "name": "sboutput",
+      "type": "serviceBus",
+      "direction": "out",
+      "queueName": "helloWorldQueueOutput",
+      "connection": "ServiceBusConnection"
     }
   ],
   "scriptFile": "../dist/serviceBusQueueTrigger1/index.js"
