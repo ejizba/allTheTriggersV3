@@ -10,7 +10,7 @@ const queueName = 'helloworldqueue';
 
 async function sendMessages(): Promise<void> {
     try {
-        const connectionString = await getLocalSetting('storage_APPSETTING');
+        const connectionString = await getLocalSetting('storageQSys_APPSETTING');
         const client = new QueueClient(connectionString, queueName);
 
         const promises: Promise<QueueSendMessageResponse>[] = [];
