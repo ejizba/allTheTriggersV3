@@ -6,7 +6,14 @@
       "direction": "in",
       "topicName": "helloWorldTopic",
       "subscriptionName": "helloWorldSub",
-      "connection": "serviceBus_APPSETTING"
+      "connection": "EmjConnection"
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "connection": "EmjConnection",
+      "name": "outputSbMsg",
+      "topicName": "helloWorldTopicOut"
     }
   ],
   "scriptFile": "../dist/serviceBusTopicTrigger1/index.js"

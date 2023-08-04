@@ -10,7 +10,7 @@ const numMessages = 600;
 
 async function sendMessages(): Promise<void> {
     try {
-        const connectionString = await getLocalSetting('serviceBus_APPSETTING');
+        const connectionString = await getLocalSetting('serviceBusTUser_APPSETTING');
         const client = new ServiceBusClient(connectionString);
 
         try {
