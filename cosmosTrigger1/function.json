@@ -5,11 +5,21 @@
       "name": "documents",
       "direction": "in",
       "leaseContainerName": "leases",
-      "connection": "cosmosDB_APPSETTING",
+      "connection": "cosmosDBConnection",
       "databaseName": "helloWorldDB",
       "partitionKey": "/id",
       "containerName": "helloWorldCol",
       "createLeaseContainerIfNotExists": true
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "helloWorldDB",
+      "containerName": "helloWorldColOut",
+      "createIfNotExists": false,
+      "connection": "cosmosDBConnection",
+      "partitionKey": "/id"
     }
   ],
   "scriptFile": "../dist/cosmosTrigger1/index.js"

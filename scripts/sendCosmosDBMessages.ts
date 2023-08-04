@@ -11,7 +11,7 @@ const conName = 'helloWorldCol';
 
 async function sendMessages(): Promise<void> {
     try {
-        const connectionString = await getLocalSetting('cosmosDB_APPSETTING');
+        const connectionString = await getLocalSetting('cosmosDBSys_APPSETTING');
         const client = new CosmosClient(connectionString);
         const container = client.database(dbName).container(conName);
 
