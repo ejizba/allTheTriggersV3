@@ -5,10 +5,17 @@
       "name": "eventHubMessages",
       "direction": "in",
       "eventHubName": "helloWorldHub",
-      "connection": "eventHub_APPSETTING",
+      "connection": "EmjConnection",
       "cardinality": "many",
       "consumerGroup": "$Default",
       "dataType": "string"
+    },
+    {
+      "type": "eventHub",
+      "direction": "out",
+      "name": "outputEventHubMessage",
+      "connection": "EmjConnection",
+      "eventHubName": "helloWorldHubOut"
     }
   ],
   "scriptFile": "../dist/eventHubTrigger1/index.js"

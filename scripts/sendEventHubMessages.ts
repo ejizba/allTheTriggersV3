@@ -11,7 +11,7 @@ const numMessages = 300;
 
 async function sendMessages(): Promise<void> {
     try {
-        const connectionString = await getLocalSetting('eventHub_APPSETTING');
+        const connectionString = await getLocalSetting('eventHubUser_APPSETTING');
         const client = new EventHubProducerClient(connectionString, hubName);
 
         try {

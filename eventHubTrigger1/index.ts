@@ -1,4 +1,4 @@
-import { AzureFunction, Context } from "@azure/functions"
+import { AzureFunction, Context } from "@azure/functions";
 
 const eventHubTrigger: AzureFunction = async function (context: Context, messages: any[]): Promise<void> {
     if (Array.isArray(messages)) {
@@ -9,6 +9,7 @@ const eventHubTrigger: AzureFunction = async function (context: Context, message
     } else {
         context.log('Event hub function processed message:', messages);
     }
+    context.bindings.outputEventHubMessage = messages;
 };
 
 export default eventHubTrigger;
